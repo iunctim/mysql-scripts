@@ -1,4 +1,4 @@
--- a mysql query to update the sys_language_uid (0 -> 1) of the translated pages in a pagetree (rootpid = 297)
+-- a mysql query to update the sys_language_uid (0 -> 1) of the translated pages in a pagetree (rootpid = 297) with a max-depth of 4
 UPDATE (
 		(select p1.title as title, p1.uid as uid from pages p1 WHERE p1.pid=297 order by p1.sorting)
 		UNION 
